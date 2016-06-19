@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Sign Up</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="/static/css/signup.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="logo"></div> 
+<div class="login-block">
+    <h1>Login</h1>
+    <form method="post">
+        <input type="text" value="" placeholder="Username" id="username" name="user" value="{{user}}"/>
+        <div class = red> {{user_error}} </div>
+        <input type="password" value="" placeholder="Password" id="password" name="password" value="" />
+        <div class = red> {{password_error}} </div>
+        <input type="password" value="" placeholder="Verify Password" id="password" name="verify" value="" />
+        <div class = red> {{verify_error}} </div>
+        <input type="email" value="" placeholder="Email" id="email" name="email" value="{{email}}" />
+        <div class = red> {{email_error}} </div>
+        <button>Submit</button>
+    </form>
+</div>
+{% endblock %}

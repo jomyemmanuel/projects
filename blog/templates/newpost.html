@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>New Post</title>
+    <style type="text/css">
+    label {
+    	font-weight: 200;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+		<h2>New Post</h2>
+		<form method="post">
+			<div> 
+				<label>Subject
+				<input type="text" name="title" value="{{title}}">
+				</label>
+			</div>
+			<div> 
+				<label>Content
+				<textarea name="textarea" value="{{textarea}}"></textarea>
+				</label>
+			</div>
+			<div>
+				<span class = "error"> {{error}} </span>
+			</div>
+			<div>
+				<button class="btn btn-md btn-primary" type="submit">Submit</button>
+			</div>
+{% endblock %}

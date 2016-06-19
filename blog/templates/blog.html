@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		{% for art in arts %}
+			  <div class="post">
+			  <div class="post-heading">
+			    <div class="post-title">
+			      {{art.title}}
+			    </div>
+
+			    <div class="post-date">
+			      {{art.created.strftime("%b %d, %Y")}}
+			    </div>
+			  </div>
+
+			  <div class="post-content">
+			    {{art.textarea}}
+			  </div>
+			</div>
+			<br><br>
+		{% endfor %}
+	</div>
+{% endblock %}

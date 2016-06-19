@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>{{arts.title}}</title>
+{% endblock %}
+
+{% block content %}
+  <div class="post container">
+  <div class="post-heading">
+    <div class="post-title">
+      {{arts.title}}
+    </div>
+
+    <div class="post-date">
+      {{arts.created.strftime("%b %d, %Y")}}
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{arts.textarea}}
+  </div>
+</div>
+{% endblock %}
