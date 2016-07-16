@@ -1,6 +1,6 @@
 #include <graphics.h>
 
-// gcc memo.c -lgraph -lm -lX11
+// gcc matchThePairs.c -lgraph
 // controls: w=>up, s=>down, a=>left, d=>right, q=>quit , spacebar=>select cell
 
 int N=4; // size
